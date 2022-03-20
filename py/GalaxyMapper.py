@@ -23,8 +23,8 @@ class GalaxyMap():
   #               (-1, -1), (0, -1), (1, -1)]
   # 4-connected grid
   directions = [         (0,  1),
-                (-1, 0),         (1, 0),
-                          (0, -1)       ]
+                (-1, 0),          (1, 0),
+                         (0, -1)        ]
 
   """
   Take the initial parameters of map size (M x N) to initialize the map
