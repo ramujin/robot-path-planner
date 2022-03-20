@@ -5,9 +5,7 @@
 #include <algorithm>
 using namespace std;
 
-
 int main() {
-    /* Enter your code here. Read input from STDIN. Print output to STDOUT */
-    cout << "Hi" << endl;
-    return 0;
+  cout << "I am just placeholder code..." << endl;
+  return 0;
 }
