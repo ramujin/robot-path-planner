@@ -4,6 +4,15 @@ A simple robot path planning library
 
 ## Description
 
+This is a small library that demonstrates a path planning algorithm, with functionality to:
+
+- initialize a map grid
+- add circular obstacles to the map
+- save the map
+- load a saved map
+- compute the shortest path given a start and end point
+- visualize the path and map together
+
 ## Setup
 
 ### Python
