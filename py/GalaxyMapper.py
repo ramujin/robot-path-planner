@@ -16,15 +16,16 @@ class GalaxyMap():
   path_radius = 0    # int: the radius of the path traversal (size of the BB8 robot)
   shortest_path = [] # list[tuple]: a list containing the points in the shortest found path
 
-  # # 8-connected grid
-  # # Not using this because results would be misleading unless we travel the same unit distance in all directions
-  # directions = [(-1,  1), (0,  1), (1,  1),
-  #               (-1,  0),          (1,  0),
-  #               (-1, -1), (0, -1), (1, -1)]
-  # 4-connected grid
-  directions = [         (0,  1),
-                (-1, 0),          (1, 0),
-                         (0, -1)        ]
+  # # 4-connected grid
+  # directions = [         (0,  1),
+  #               (-1, 0),          (1, 0),
+  #                        (0, -1)        ]
+
+  # 8-connected grid with priority for unit step
+  # Note: The results are a bit misleading unless we travel the same unit distance in all directions,
+  # but I prioritize 4-connected movement to mitigate the issue a bit
+  directions = [(0,  1), (0, -1), (-1,  0), (1,  0),
+                (-1,  1),  (1,  1),(-1, -1),  (1, -1)]
 
   """
   Take the initial parameters of map size (M x N) to initialize the map
