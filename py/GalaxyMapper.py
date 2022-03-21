@@ -129,7 +129,6 @@ class GalaxyMap():
   Visualize a map and path to the screen
   """
   def show(self) -> None:
-
     # Create the figure amd axes
     fig, ax = plt.subplots()
     fig.set_size_inches(10, 8)
@@ -159,7 +158,7 @@ class GalaxyMap():
 
     # Draw the shortest path (if one is found)
     for pt in self.shortest_path:
-      pt_circle = plt.Circle(pt, self.path_radius, alpha=0.1, lw=2, facecolor='gray', edgecolor='orange')
+      pt_circle = plt.Circle(pt, self.path_radius, alpha=0.2, lw=2, facecolor='gray', edgecolor='orange')
       ax.add_patch(pt_circle)
 
     # Draw robot start and end points (if there was a path found)
@@ -170,8 +169,9 @@ class GalaxyMap():
       end_circle = plt.Circle(end, self.path_radius, alpha=0.9, lw=4, facecolor='w', edgecolor='orange')
       ax.add_patch(start_circle)
       ax.add_patch(end_circle)
-      ax.text(start[0]-5, start[1], "start", {'color':'green', 'fontsize':'large', 'weight':'bold'})
-      ax.text(end[0]-5, end[1], "end", {'color':'green', 'fontsize':'large', 'weight':'bold'})
+      fonts = {'backgroundcolor': 'green', 'color':'white', 'fontsize':'large', 'weight':'bold'}
+      ax.text(start[0]-5, start[1]-2, "start", fonts)
+      ax.text(end[0]-5, end[1]-2, "end", fonts)
 
     # Show the plot of everything together
     ax.set_title("Welcome to the New Republic, BB8!", {'color':'red', 'fontsize':'xx-large', 'weight':'bold'})
