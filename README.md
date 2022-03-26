@@ -1,6 +1,7 @@
 # Robot Path Planner
 
-A simple robot path planning library
+A simple robot path planning library as illustrated in this figure.
+![Navigating a path from start to finish](HeroBB8.png)
 
 ## Description
 
